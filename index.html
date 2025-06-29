@@ -17,6 +17,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        margin: 0;
       }
 
       body {
@@ -177,7 +178,7 @@
 
       @media screen and (max-width: 480px) {
         .welcome-div {
-          max-width: 98%;
+          max-width: 90%;
           padding: 10px;
         }
 
@@ -200,6 +201,8 @@
     </style>
   </head>
   <body>
+
+    
     <div class="welcome-div">
       <h2>Welcome to Cyberfreak Software</h2>
       <p style="margin-top: -20px;">
@@ -209,10 +212,17 @@
         <text class="coming-soon" style="font-size: 20px; margin-right: 20px;">Coming soon</text>
         <img src="images/full-logo-white.png" alt="mm_logo" style="max-width: 40%; height: auto;"/>
       </div>
-      <p class="contact" style="margin-top: 40px;">
-        Contact us at <a class="contact" href="mailto:george@cyberfreaksoftware.co.uk">george@cyberfreaksoftware.co.uk</a>
-      </p>
+      <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
+        <p class="contact" style="margin-top: 40px;">
+          Contact us at <a class="contact" href="mailto:george@cyberfreaksoftware.co.uk">george@cyberfreaksoftware.co.uk</a>
+        </p>
+        <p class="contact" style="margin-top: 40px; border-left: #444 1px solid;">
+          Find us on <a class="contact" href="https://find-and-update.company-information.service.gov.uk/company/16445225">Companies House!</a>
+        </p>
+      </div>
     </div>
+
+    
     <div class="particles">
       <div class="particleAh" style="left: 5%; top: 10%; animation-delay: 0.5s;"></div>
       <div class="particleAh" style="left: 40%; top: 60%; animation-delay: 1.1s;"></div>
@@ -258,7 +268,7 @@
       });
       
       // Remove the 'tapped' class when the user stops touching the image
-      document.querySelector('.welcome-div.tapped').addEventListener('touchend', function() {
+      document.querySelector('.welcome-div').addEventListener('touchend', function() {
         this.classList.remove('tapped');
       });
     </script>
