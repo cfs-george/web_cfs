@@ -149,7 +149,7 @@
 
       @media screen and (max-width: 768px) {
         .welcome-div {
-          max-width: 95%;
+          max-width: 90%;
           padding: 15px;
         }
 
@@ -258,7 +258,7 @@
       });
       
       // Remove the 'tapped' class when the user stops touching the image
-      document.querySelector('.welcome-div').addEventListener('touchend', function() {
+      document.querySelector('.welcome-div.tapped').addEventListener('touchend', function() {
         this.classList.remove('tapped');
       });
     </script>
