@@ -49,6 +49,10 @@
         box-shadow: 0 0 20px 5px rgba(180, 180, 180, 0.685);
       }
 
+      .welcome-div.tapped {
+        box-shadow: 0 0 20px 5px rgba(180, 180, 180, 0.685);
+      }
+
       .welcome-div h2, .welcome-div p, .welcome-div .coming-soon {
         font-family: Arial;
         font-weight: bold;
@@ -246,5 +250,17 @@
       <div class="particleDh" style="left: 40%; top: 25%; animation-delay: 2.0s;"></div>
       <div class="particleDh" style="left: 60%; top: 85%; animation-delay: 0.8s;"></div>
     </div>
+    <script>
+      // Add event listener to the image
+      document.querySelector('.welcome-div').addEventListener('touchstart', function() {
+        // Add the 'tapped' class to the image
+        this.classList.add('tapped');
+      });
+      
+      // Remove the 'tapped' class when the user stops touching the image
+      document.querySelector('.welcome-div').addEventListener('touchend', function() {
+        this.classList.remove('tapped');
+      });
+    </script>
   </body>
 </html>
