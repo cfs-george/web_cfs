@@ -116,73 +116,73 @@
         text-align: center;
       }
 
-      /* ===== PREFOOTER ===== */
-      .prefooter {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        padding: 40px 20px 30px;
-        color: #C9C9C9;
-        background: rgba(20, 20, 20, 0.85);
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-      }
-
-      .prefooter .contact-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        text-align: center;
-      }
-
-      .prefooter a {
-        color: #6CA5AC;
-        text-decoration: none;
-        transition: color 0.2s ease-in-out;
-      }
-
-      .prefooter a:hover {
-        color: #71bcc6;
-      }
-
-      .prefooter .social-icons {
-        display: flex;
-        gap: 25px;
-        margin-top: 10px;
-      }
-
-      .prefooter .social-icons a {
-        color: #C9C9C9;
-        font-size: 20px;
-        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-      }
-
-      .prefooter .social-icons a:hover {
-        color: #6CA5AC;
-        transform: scale(1.1);
-      }
-
       /* ===== FOOTER ===== */
       footer {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 60px;
-        background: rgba(17, 17, 17, 0.9);
+        background: rgba(17, 17, 17, 0.95);
+        border-top: 1px solid #333;
+        color: #C9C9C9;
+        backdrop-filter: blur(5px);
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .contact-links a {
         color: #6CA5AC;
-        font-size: 0.8rem;
-        border-top: 1px solid #333;
-        backdrop-filter: blur(5px);
-        z-index: 10;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .contact-links a:hover {
+        color: #71bcc6;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 25px;
+        margin-top: 5px;
+      }
+
+      .social-icons a {
+        color: #C9C9C9;
+        font-size: 18px;
+        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+      }
+
+      .social-icons a:hover {
+        color: #6CA5AC;
+        transform: scale(1.1);
+      }
+
+      .footer-note {
+        margin-top: 5px;
+        font-size: 0.75rem;
+        color: #6CA5AC;
+        line-height: 1.4;
       }
 
       /* ===== PARTICLE BACKGROUND ===== */
@@ -248,6 +248,19 @@
         .welcome-div { max-width: 90%; top: 100px; height: auto; }
         .main-title { font-size: 1.8rem; margin-top: 120px; }
         .main-subtitle { font-size: 1rem; max-width: 90%; }
+
+        footer {
+          padding: 20px 10px;
+        }
+
+        .contact-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .footer-note {
+          font-size: 0.7rem;
+        }
       }
     </style>
   </head>
@@ -265,7 +278,7 @@
 
     <!-- ===== HERO TEXT ===== -->
     <h1 class="main-title">Bringing British ingenuity to modern-day software</h1>
-    <h2 class="main-subtitle">Explore our live and upcoming projects that showcase creative solutions for modern businesses</h2>
+    <h2 class="main-subtitle">Explore our live and upcoming projects below</h2>
 
     <!-- ===== MAIN CONTENT ===== -->
     <div class="welcome-div">
@@ -289,25 +302,22 @@
       </div>
     </div>
 
-    <!-- ===== PREFOOTER ===== -->
-    <div class="prefooter" id="contact">
-      <div class="contact-links">
-        <p>Contact us at <a href="mailto:george@cyberfreaksoftware.co.uk"><i class="fa fa-envelope"></i></a></p>
-        <p>Find us on <a href="https://find-and-update.company-information.service.gov.uk/company/16445225">Companies House</a></p>
-      </div>
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/company/cyberfreaksoftware" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.x.com/CyberfreakSoft" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.youtube.com/@CyberfreakSoftware" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/cyberfreaksoftware" title="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-
     <!-- ===== FOOTER ===== -->
-    <footer>
-      © 2025 Cyberfreak Software Limited. All rights reserved.
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="contact-links">
+          <p>Contact us at <a href="mailto:george@cyberfreaksoftware.co.uk"><i class="fa fa-envelope"></i></a></p>
+          <p>Find us on <a href="https://find-and-update.company-information.service.gov.uk/company/16445225">Companies House</a></p>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/cyberfreaksoftware" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <p class="footer-note">© 2025 Cyberfreak Software Limited. All rights reserved. Company Registered in England No. 16445225</p>
+      </div>
     </footer>
+
 
     <!-- ===== PARTICLES ===== -->
     <div class="particles">
