@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyberfreak Software - Welcome</title>
     <link rel="icon" type="image/x-icon" href="images\cfs_logo_dark_short.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
       body,html {
         width: 100%;
@@ -225,17 +225,29 @@
 
     
     <div class="welcome-div">
-      <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 0px; width: 100%;">
-        <img src="images/cfs_logo_dark.svg" alt="cfs_logo" style="max-width: 30%; height: auto;"/>
-        <p style="margin-top: -20px;">
+    <!-- Row 1 -->
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
+      <div style="width: 50%; display: flex; justify-content: center;">
+        <img src="images/cfs_logo_dark.svg" alt="cfs_logo" style="max-width: 30%; height: auto;" />
+      </div>
+      <div style="width: 50%; display: flex; justify-content: center;">
+        <p style="margin-top: -20px; text-align: center;">
           We're a British software company excited to launch our upcoming products
         </p>
       </div>
-      <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 60px; width: 100%;">
+    </div>
+
+    <!-- Row 2 -->
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 60px; width: 100%;">
+      <div style="width: 50%; display: flex; justify-content: flex-end; align-items: center;">
         <span class="coming-soon" style="font-size: 20px; margin-right: 20px;">
-          Now available on the app store! <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+          Now available on the app store! <i class="fa fa-arrow-right" style="margin-left: 10px;"></i>
         </span>
-        <a href="https://www.mileagemonster.co.uk" title="MileageMonster - Smart UK Mileage Tracking App" style="display: flex; justify-content: center; align-items: center;">
+      </div>
+      <div style="width: 50%; display: flex; justify-content: flex-start; align-items: center;">
+        <a href="https://www.mileagemonster.co.uk" 
+          title="MileageMonster - Smart UK Mileage Tracking App" 
+          style="display: flex; justify-content: center; align-items: center;">
           <img 
             src="images/full-logo-white.png" 
             alt="MileageMonster - UK Business Mileage Tracking App" 
@@ -243,16 +255,19 @@
           />
         </a>
       </div>
-      <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 96%; margin-top: 60px; padding: 10px;">
-        <p class="contact">
-          Contact us at <a class="contact" href="mailto:george@cyberfreaksoftware.co.uk"><i class="fa fa-envelope"></i></a>
-        </p>
-        <div style="border-left: #444 1px solid; width: 1px; height: 60px;"></div>
-        <p class="contact">
-          Find us on <a class="contact" style="color: #6CA5AC;" href="https://find-and-update.company-information.service.gov.uk/company/16445225">Companies House!</a>
-        </p>
-      </div>
     </div>
+
+    <!-- Row 3 -->
+    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 96%; margin-top: 60px; padding: 10px;">
+      <p class="contact">
+        Contact us at <a class="contact" href="mailto:george@cyberfreaksoftware.co.uk"><i class="fa fa-envelope"></i></a>
+      </p>
+      <div style="border-left: #444 1px solid; width: 1px; height: 60px;"></div>
+      <p class="contact">
+        Find us on <a class="contact" style="color: #6CA5AC;" href="https://find-and-update.company-information.service.gov.uk/company/16445225">Companies House!</a>
+      </p>
+    </div>
+  </div>
 
     
     <div class="particles">
