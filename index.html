@@ -361,10 +361,48 @@
           margin-top: 20px;
         }
       }
+      
 
-      @media screen and (max-width: 450) {
+      @media screen and (max-width: 450px) {
         body {
           margin: 15px !important;
+        }
+
+        .welcome-div {
+          max-width: 95%; /* Slightly wider to use available space */
+          padding: 15px; /* Further reduced padding for compact screens */
+          border-radius: 15px; /* Slightly smaller radius for proportionality */
+        }
+
+        .brand {
+          flex-direction: column; /* Stack elements vertically */
+          gap: 15px; /* Smaller gap for compact layout */
+          margin-top: 20px; /* Reduced margin for tighter spacing */
+        }
+
+        .brand > div {
+          width: 100% !important; /* Full width for text and image containers */
+          justify-content: center !important; /* Center content */
+        }
+
+        .coming-soon {
+          font-size: 12px; /* Smaller font for readability */
+          text-align: center; /* Center text for balance */
+          line-height: 1.4; /* Slightly increased line height for clarity */
+        }
+
+        .coming-soon-head {
+          font-size: 1em; /* Smaller heading size */
+          margin-bottom: 6px; /* Reduced margin */
+        }
+
+        #mid-arrow {
+          display: none; /* Hide arrow as elements are stacked */
+        }
+
+        .brand img {
+          width: 70% !important; /* Smaller images for tiny screens */
+          max-width: 150px; /* Cap image size */
         }
       }
     </style>
