@@ -38,19 +38,19 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100px;
+        height: 70px;
         background: rgba(17, 17, 17, 0.9);
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 40px;
         z-index: 10;
-        border-bottom: 1px solid #333;
+        /* border-bottom: 1px solid #333; */
         backdrop-filter: blur(5px);
       }
 
       header img {
-        height: 80px;
+        height: 120px;
         width: auto;
       }
 
@@ -117,7 +117,7 @@
 
       .coming-soon {
         text-align: right;
-        font-size: 20px;
+        font-size: 16px;
       }
 
       #mid-arrow {
@@ -299,7 +299,10 @@
       <!-- MileageMonster -->
       <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;">
         <div style="width: 50%; display: flex; justify-content: flex-end; align-items: center;">
-          <span class="coming-soon">
+          <span class="coming-soon" style="display: block; text-align: center;">
+            <strong style="display: block; font-size: 1.2em; color: #cc66ff; margin-bottom: 4px;">
+              MileageMonster
+            </strong>
             The smarter way for UK businesses to manage mileage tracking and employee expense claims — built for accuracy, convenience, and full HMRC compliance
           </span>
           <i class="fa fa-arrow-right" id="mid-arrow" style="color: #cc66ff;"></i>
