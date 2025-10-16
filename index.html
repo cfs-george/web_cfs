@@ -213,7 +213,7 @@
 
       /* ===== SCROLLBAR STYLING ===== */
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 6px;
       }
 
       ::-webkit-scrollbar-track {
@@ -222,12 +222,12 @@
       }
 
       ::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #6CA5AC, #cc66ff);
+        background: #6CA5AC;
         border-radius: 10px;
       }
 
       ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(180deg, #91e5f0, #e0a3ff);
+        background: #91e5f0;
       }
 
 
@@ -288,6 +288,8 @@
         75% { transform: translate(-40px, 10px); }
       }
 
+
+      /* ===== MEDIA QUERIES ===== */
       @media screen and (max-width: 768px) {
         header { flex-direction: column; height: auto; padding: 10px 0; }
         nav { margin-top: 5px; }
@@ -312,7 +314,6 @@
     </style>
   </head>
   <body>
-
     <header>
       <img src="images/cfs_logo_dark.svg" alt="Cyberfreak Software logo">
       <nav>
