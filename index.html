@@ -66,7 +66,7 @@
         margin-top: 80px;
       }
 
-      nav a {
+      nav a, #scrollToBottom {
         font-size: 18px;
         color: #C9C9C9;
         text-decoration: none;
@@ -74,7 +74,7 @@
         transition: color 0.2s ease-in-out;
       }
 
-      nav a:hover {
+      nav a:hover, #scrollToBottom:hover {
         color: #6CA5AC;
       }
 
@@ -336,7 +336,7 @@
           margin-top: 20px;
         }
 
-        nav a {
+        nav a, #scrollToBottom {
           margin: 0 10px;
         }
 
@@ -432,6 +432,7 @@
       <nav>
         <a href="#">Home</a>
         <a href="https://www.mileagemonster.co.uk/blog">Blog</a>
+        <button id="scrollToBottom">Contact</button>
       </nav>
       <div style="width: 207px;"></div>
     </header>
@@ -613,11 +614,20 @@
     </div>
 
     <script>
+      // Tapped
       document.querySelector('.welcome-div').addEventListener('touchstart', function() {
         this.classList.add('tapped');
       });
       document.querySelector('.welcome-div').addEventListener('touchend', function() {
         this.classList.remove('tapped');
+      });
+
+      // scrollToBottom
+      document.getElementById('scrollToBottom').addEventListener('click', () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
       });
     </script>
   </body>
