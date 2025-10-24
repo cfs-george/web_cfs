@@ -621,25 +621,37 @@
     </div>
 
     <script>
-      // Tapped
-      document.querySelector('.welcome-div').addEventListener('touchstart', function() {
-        this.classList.add('tapped');
-      });
-      document.querySelector('.welcome-div').addEventListener('touchend', function() {
-        this.classList.remove('tapped');
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM fully loaded');
 
-      console.log('Scroll down');
-      // scrollToBottom
-      document.getElementById('scrollToBottom').addEventListener('click', () => {
-        console.log('Inside Start');
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: 'smooth'
-        });
-        console.log('Inside End');
+        // Tapped effect
+        const welcomeDiv = document.querySelector('.welcome-div');
+        if (welcomeDiv) {
+          welcomeDiv.addEventListener('touchstart', function() {
+            this.classList.add('tapped');
+          });
+          welcomeDiv.addEventListener('touchend', function() {
+            this.classList.remove('tapped');
+          });
+        }
+
+        // Scroll to bottom
+        const scrollButton = document.getElementById('scrollToBottom');
+        if (scrollButton) {
+          scrollButton.addEventListener('click', () => {
+            console.log('Inside Start');
+            window.scrollTo({
+              top: document.documentElement.scrollHeight,
+              behavior: 'smooth'
+            });
+            console.log('Inside End');
+          });
+        } else {
+          console.error('Button with id="scrollToBottom" not found!');
+        }
+
+        console.log('Event listeners attached');
       });
-      console.log('End');
     </script>
   </body>
 </html>
