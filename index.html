@@ -622,36 +622,29 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOM fully loaded');
+      console.log('DOM fully loaded');
 
-        // Tapped effect
-        const welcomeDiv = document.querySelector('.welcome-div');
-        if (welcomeDiv) {
-          welcomeDiv.addEventListener('touchstart', function() {
-            this.classList.add('tapped');
+      const scrollButton = document.getElementById('scrollToBottom');
+      if (scrollButton) {
+        scrollButton.addEventListener('click', () => {
+          console.log('Inside Start');
+
+          // Smooth scroll to footer
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
           });
-          welcomeDiv.addEventListener('touchend', function() {
-            this.classList.remove('tapped');
-          });
-        }
 
-        // Scroll to bottom
-        const scrollButton = document.getElementById('scrollToBottom');
-        if (scrollButton) {
-          scrollButton.addEventListener('click', () => {
-            console.log('Inside Start');
-            window.scrollTo(0, document.documentElement.scrollHeight);
-            console.log('Inside End');
-          });
-        } else {
-          console.error('Button with id="scrollToBottom" not found!');
-        }
+          console.log('Inside End');
+        });
+      } else {
+        console.error('Button with id="scrollToBottom" not found!');
+      }
 
-        console.log('Event listeners attached');
-
-        console.log(document.getElementById('scrollToBottom')); // Should NOT be null
-        console.log('Page height:', document.documentElement.scrollHeight);
-      });
+      console.log('Event listeners attached');
+      console.log(scrollButton);
+      console.log('Page height:', document.documentElement.scrollHeight);
+    });
     </script>
   </body>
 </html>
