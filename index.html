@@ -629,13 +629,17 @@
         this.classList.remove('tapped');
       });
 
+      console.log('Scroll down');
       // scrollToBottom
       document.getElementById('scrollToBottom').addEventListener('click', () => {
+        console.log('Inside Start');
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: 'smooth'
         });
+        console.log('Inside End');
       });
+      console.log('End');
     </script>
   </body>
 </html>
