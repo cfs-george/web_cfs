@@ -622,23 +622,16 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-      console.log('DOM fully loaded');
 
-      const scrollButton = document.getElementById('scrollToBottom');
-      if (scrollButton) {
-        scrollButton.addEventListener('click', () => {
-        console.log('Inside Start');
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        console.log('Inside End');
+        const scrollButton = document.getElementById('scrollToBottom');
+        if (scrollButton) {
+          scrollButton.addEventListener('click', () => {
+          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+        } else {
+          console.error('Button with id="scrollToBottom" not found!');
+        }
       });
-      } else {
-        console.error('Button with id="scrollToBottom" not found!');
-      }
-
-      console.log('Event listeners attached');
-      console.log(scrollButton);
-      console.log('Page height:', document.documentElement.scrollHeight);
-    });
     </script>
   </body>
 </html>
