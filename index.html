@@ -627,16 +627,10 @@
       const scrollButton = document.getElementById('scrollToBottom');
       if (scrollButton) {
         scrollButton.addEventListener('click', () => {
-          console.log('Inside Start');
-
-          // Smooth scroll to footer
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-          });
-
-          console.log('Inside End');
-        });
+        console.log('Inside Start');
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        console.log('Inside End');
+      });
       } else {
         console.error('Button with id="scrollToBottom" not found!');
       }
