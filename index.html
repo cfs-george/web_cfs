@@ -23,7 +23,7 @@
         font-family: "Inter", sans-serif;
       }
 
-      a {
+      a, #scrollToBottom {
         font-family: "Inter", sans-serif;
         color: #fff;
         text-decoration: none;
@@ -78,6 +78,11 @@
         color: #6CA5AC;
       }
 
+      #dcLink:hover {
+        color: #d93d00;
+      }
+
+
       /* ===== HERO TEXT ===== */
       .main-title {
         margin-top: 40px;
@@ -112,7 +117,7 @@
         background-color: rgba(34, 34, 34, 0.6);
         backdrop-filter: blur(3px);
         border-radius: 20px;
-        box-shadow: 0 0 20px 5px rgba(17, 17, 17, 0.3);
+        box-shadow: 0 0 20px 5px rgba(17, 17, 17, 0.5);
         transition: all 0.5s ease-in-out;
         overflow: auto;
         z-index: 2;
@@ -432,7 +437,7 @@
       <nav>
         <a href="#">Home</a>
         <a href="https://www.mileagemonster.co.uk/blog">Blog</a>
-        <button id="scrollToBottom">Contact</button>
+        <button id="scrollToBottom" style="background: none; border: none; cursor: pointer;">Contact</button>
       </nav>
       <div style="width: 207px;"></div>
     </header>
@@ -506,7 +511,9 @@
             <strong class="coming-soon-head" style="color: #d93d00;">
               Zero to CEO
             </strong>
-            An e-learning package that will teach you how you can follow the same simple steps as the 18 year old author to become the CEO of his own company, reach £1000 revenue per month and begin the road to success. Featuring <a href="https://dirtycars.co.uk" target="_blank" rel="noopener noreferrer" title="Dirty Cars - Discover the art of professional car care">dirtycars.co.uk</a>
+            An e-learning package that will teach you how you can follow the same simple steps as the 18 year old author to become the CEO of his own company,
+            reach £1000 revenue per month and begin the road to success. Featuring
+            <a href="https://dirtycars.co.uk" id="dcLink" target="_blank" rel="noopener noreferrer" title="Dirty Cars - Discover the art of professional car care">dirtycars.co.uk</a>
           </span>
           <i class="fa fa-arrow-right" id="mid-arrow" style="color: #d93d00;"></i>
         </div>
@@ -625,7 +632,7 @@
       // scrollToBottom
       document.getElementById('scrollToBottom').addEventListener('click', () => {
         window.scrollTo({
-          top: document.body.scrollHeight,
+          top: document.documentElement.scrollHeight,
           behavior: 'smooth'
         });
       });
