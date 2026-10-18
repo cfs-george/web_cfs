@@ -20,8 +20,7 @@ dialog.innerHTML = `
     <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="website" tabindex="-1" autocomplete="off"></div>
     <p class="contact-status" role="status" aria-live="polite"></p>
     <button type="submit" class="contact-send">Send message</button>
-  </form>
-  <p class="contact-alternative">You can also message us on <a href="https://www.linkedin.com/company/cyberfreak-software-ltd" target="_blank" rel="noopener noreferrer">LinkedIn <i class="fa-brands fa-linkedin" aria-hidden="true"></i></a> or <a href="https://www.instagram.com/cfs_george/" target="_blank" rel="noopener noreferrer">Instagram <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>.</p>`;
+  </form>`;
 document.body.append(dialog);
 const form = dialog.querySelector('form');
 const status = dialog.querySelector('.contact-status');
@@ -64,7 +63,7 @@ form.addEventListener('submit', async event => {
     form.reset();
     status.textContent = 'Thank you — your message has been sent.';
   } catch {
-    status.textContent = 'Your message could not be sent. Please try again or use the social links below.';
+    status.textContent = 'Your message could not be sent. Please try again later.';
   } finally {
     submit.disabled = false;
   }
