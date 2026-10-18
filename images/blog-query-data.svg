@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Search query data for content planning</title><desc id="desc">A table of search queries becomes content ideas.</desc>
+  <rect width="1200" height="630" rx="32" fill="#101719"/><rect x="100" y="105" width="650" height="420" rx="22" fill="#172428" stroke="#48636b" stroke-width="4"/>
+  <g fill="#d8f5f8" font-family="Arial, sans-serif"><text x="145" y="165" font-size="26" font-weight="700">SEARCH QUERIES</text><text x="535" y="165" font-size="22">IMPRESSIONS</text><text x="145" y="238" font-size="24">seo help for small business</text><text x="575" y="238" font-size="24">1,240</text><text x="145" y="322" font-size="24">how to submit a sitemap</text><text x="575" y="322" font-size="24">860</text><text x="145" y="406" font-size="24">website content ideas</text><text x="575" y="406" font-size="24">540</text></g><g stroke="#48636b" stroke-width="3"><path d="M135 190h580M135 264h580M135 348h580M135 432h580"/></g>
+  <path d="M805 225h250v155H805z" fill="#173139" stroke="#91e5f0" stroke-width="5"/><path d="M835 260h190M835 300h150M835 340h175" stroke="#91e5f0" stroke-width="10" stroke-linecap="round"/><path d="M885 460l55 55 128-150" fill="none" stroke="#91e5f0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="90" y="575" fill="#d8f5f8" font-family="Arial, sans-serif" font-size="30" letter-spacing="5">DATA-LED CONTENT IDEAS</text>
+</svg>

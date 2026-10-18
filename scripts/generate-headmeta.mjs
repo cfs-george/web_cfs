@@ -17,6 +17,7 @@ export function renderHead(file, page) {
   const canonical = new URL(page.canonical || url, origin);
   if (canonical.origin !== origin || canonical.hash || canonical.search) throw new Error(`${file}: invalid CFS canonical URL`);
   const image = new URL(page.image || defaultImage, origin).href;
+  const socialImage = new URL(page.socialImage || page.image || defaultImage, origin).href;
   const imageAlt = page.imageAlt || 'Cyberfreak Software logo';
   const organization = {
     '@type': 'Organization', '@id': orgId, name: brand,
@@ -64,8 +65,8 @@ export function renderHead(file, page) {
     '<link rel="preconnect" href="https://cdnjs.cloudflare.com">',
     '<link rel="preconnect" href="https://fonts.googleapis.com">',
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
-    ...Object.entries({ title: page.title, description: page.description, url: canonical.href, type: page.article ? 'article' : (page.ogType || 'website'), site_name: brand, locale: 'en_GB', image, 'image:type': 'image/png', 'image:alt': imageAlt }).filter(([key]) => key !== 'image:type' || image.endsWith('.png')).map(([key,value]) => meta('og:' + key,value,true)),
-    ...Object.entries({ card: 'summary', title: page.title, description: page.description, image, 'image:alt': imageAlt, site: '@cfs_george' }).map(([key,value]) => meta('twitter:' + key,value))
+    ...Object.entries({ title: page.title, description: page.description, url: canonical.href, type: page.article ? 'article' : (page.ogType || 'website'), site_name: brand, locale: 'en_GB', image: socialImage, 'image:type': 'image/png', 'image:alt': imageAlt }).filter(([key]) => key !== 'image:type' || socialImage.endsWith('.png')).map(([key,value]) => meta('og:' + key,value,true)),
+    ...Object.entries({ card: 'summary', title: page.title, description: page.description, image: socialImage, 'image:alt': imageAlt, site: '@cfs_george' }).map(([key,value]) => meta('twitter:' + key,value))
   ];
   if (page.article) {
     tags.push(meta('article:published_time',page.article.datePublished,true));

@@ -23,10 +23,52 @@
   },
   "blog/index.html": {
     "title": "SEO, Websites & Software Blog | Cyberfreak Software",
-    "description": "Ideas and updates from Cyberfreak Software on SEO, booking websites and software development. Our first CFS articles are coming soon.",
+    "description": "Practical articles from Cyberfreak Software on SEO management, Search Console, website visibility, booking websites and software development.",
     "name": "Blog",
     "type": "CollectionPage",
     "blog": true
+  },
+  "blog/why-seo-management-matters/index.html": {
+    "title": "Why SEO Management Matters for Your Website | Cyberfreak Software",
+    "description": "Learn why ongoing SEO management, sitemap maintenance and Google Search Console monitoring matter for a website's search visibility.",
+    "name": "Why SEO Management Matters",
+    "type": "BlogPosting",
+    "image": "/images/blog-seo-management.svg",
+    "socialImage": "/images/cfs_logo_dark.png",
+    "imageAlt": "Illustration of an SEO roadmap and search growth chart",
+    "article": {
+      "headline": "Why SEO Management Matters for Your Website",
+      "datePublished": "2026-10-18",
+      "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" }
+    }
+  },
+  "blog/more-indexed-pages-more-opportunities/index.html": {
+    "title": "More Indexed Pages, More Search Opportunities? | Cyberfreak Software",
+    "description": "Understand how indexable, useful website pages can create more opportunities to appear in Google Search and attract relevant traffic.",
+    "name": "More Indexed Pages, More Search Opportunities?",
+    "type": "BlogPosting",
+    "image": "/images/blog-indexed-pages.svg",
+    "socialImage": "/images/cfs_logo_dark.png",
+    "imageAlt": "Illustration of connected website pages appearing in search",
+    "article": {
+      "headline": "More Indexed Pages, More Search Opportunities?",
+      "datePublished": "2026-10-18",
+      "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" }
+    }
+  },
+  "blog/search-console-query-data-content-ideas/index.html": {
+    "title": "Use Search Console Query Data for SEO Content Ideas | Cyberfreak Software",
+    "description": "Use Google Search Console query data to find keyword opportunities, plan useful SEO content and improve pages already appearing in search.",
+    "name": "Use Search Console Query Data for SEO Content Ideas",
+    "type": "BlogPosting",
+    "image": "/images/blog-query-data.svg",
+    "socialImage": "/images/cfs_logo_dark.png",
+    "imageAlt": "Illustration of search query data informing content ideas",
+    "article": {
+      "headline": "How to Use Search Console Query Data for SEO Content Ideas",
+      "datePublished": "2026-10-18",
+      "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" }
+    }
   },
   "boilerplate-privacy-policy/index.html": {
     "title": "React Native Boilerplate Privacy Policy | Cyberfreak Software",

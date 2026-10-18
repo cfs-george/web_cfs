@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">SEO management roadmap</title><desc id="desc">A sitemap, search console panel and upward trend line.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173139"/><stop offset="1" stop-color="#101415"/></linearGradient></defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/><g stroke="#6ca5ac" opacity=".35"><path d="M90 510H1110M90 390H1110M90 270H1110M90 150H1110"/></g>
+  <g fill="#172428" stroke="#91e5f0" stroke-width="4"><rect x="120" y="145" width="250" height="130" rx="18"/><rect x="475" y="235" width="250" height="130" rx="18"/><rect x="830" y="105" width="250" height="130" rx="18"/></g>
+  <g fill="#d8f5f8" font-family="Arial, sans-serif" font-weight="700"><text x="155" y="205" font-size="34">SITEMAP</text><text x="500" y="295" font-size="28">SEARCH CONSOLE</text><text x="875" y="165" font-size="30">CONTENT PLAN</text></g>
+  <path d="M245 275V420H600V365M600 365V420H955V235" fill="none" stroke="#91e5f0" stroke-width="7" stroke-linecap="round"/><path d="M790 485 C865 435 895 475 950 385 S1040 330 1090 255" fill="none" stroke="#91e5f0" stroke-width="12" stroke-linecap="round"/><path d="M1060 267l32-14-9 34" fill="none" stroke="#91e5f0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="90" y="575" fill="#d8f5f8" font-family="Arial, sans-serif" font-size="30" letter-spacing="5">SEO MANAGEMENT</text>
+</svg>
