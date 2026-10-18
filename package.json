@@ -1,0 +1,19 @@
+{
+  "name": "web_cyberfreaksoftware",
+  "version": "1.0.0",
+  "description": "Cyberfreak Software webpage",
+  "license": "ISC",
+  "author": "George Lomas",
+  "type": "module",
+  "main": "cfs_server.js",
+  "scripts": {
+    "start": "nodemon cfs_server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

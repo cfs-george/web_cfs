@@ -7,6 +7,10 @@ on:
     branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
+  schedule:
+    # Daily at 04:23 UTC; deploys a freshly generated sitemap.
+    - cron: "23 4 * * *"
+
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -31,6 +35,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate sitemap
+        run: node scripts/generate-sitemap.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+:root{color-scheme:dark;--bg-color:#000;--footer-bg:#171b1d;--text-color-inferior:#bfc8cc;--accent-color:#91e5f0;--border-radius:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:30px}
+body{margin:0;background:var(--bg-color);color:#f4f4f4;font-family:'Exo 2',sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent-color)}
+a:focus-visible{outline:3px solid var(--accent-color);outline-offset:6px}
+header{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:16px 4%;background:#111e;backdrop-filter:blur(5px)}
+.logo img{display:block;width:170px;max-width:100%;height:76px;object-fit:contain}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:12px 24px}
+nav a{color:#c9c9c9;font-size:.95rem}
+nav a[aria-current=page]{color:var(--accent-color);text-decoration:underline;text-underline-offset:8px}
+.hero-section{position:relative;min-height:770px;overflow:hidden}
+.hero-section::before{content:'';position:absolute;inset:0;background-image:url('/images/background_alpine.png');background-size:cover;background-position:center;transform:scale(1.03)}
+.hero-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(to bottom,transparent,#000)}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:auto;padding:90px 36px 180px}
+.eyebrow{color:var(--accent-color);font-size:.8rem;font-weight:700;letter-spacing:.16em;margin:0 0 20px}
+h1,h2,h3{line-height:1.15}
+h1{font-size:clamp(2.5rem,5vw,4.8rem);font-weight:600;letter-spacing:-.035em;margin:0 0 36px}
+h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;margin:0 0 24px}
+h3{font-size:1.65rem;font-weight:600}
+.hero-row{display:grid;grid-template-columns:1.25fr 1fr;gap:90px;align-items:center}
+.style-box{max-width:630px;padding:26px 30px;background:#0c171bd9;border:1px solid #6ca5ac66;border-radius:24px;backdrop-filter:blur(3px)}
+.style-box p{font-size:1.2rem;margin:0 0 24px}
+.button{display:inline-block;background:#6ca5ac;color:#071012;border-radius:8px;padding:12px 20px;font-weight:700}
+.button:hover{background:#91e5f0;color:#071012}
+.hero-summary p{padding:16px 0;border-bottom:1px solid #c9e9ef66;font-size:1.3rem;margin:0;text-shadow:0 2px 8px #000}
+.section{max-width:1200px;margin:0 auto;padding:70px 36px}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}
+.service-card{display:flex;flex-direction:column;border:1px solid #304146;background:linear-gradient(145deg,#172428,#101415);border-radius:20px;padding:30px}
+.service-card p{color:#c5ced1;margin-top:0}
+.service-card .text-link{margin-top:auto}
+.service-number{font-size:.75rem;letter-spacing:.08em;color:var(--accent-color)}
+.text-link,.blog-read-more{color:var(--accent-color);font-weight:600}
+.about-section{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid #263236;margin-top:40px}
+.about-section p{margin-top:0;color:#c5ced1}
+.compact{min-height:650px}
+.page-heading{max-width:1100px;margin:auto;padding:70px 30px 20px;text-align:center}
+.page-heading p{color:#bfc8cc}
+.page-heading .eyebrow{color:var(--accent-color)}
+footer{text-align:center;padding:70px 24px 30px;background:#101416;border-top:1px solid #263236;margin-top:60px}
+footer p{color:#bfc8cc}
+.social-links{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin:34px 0}
+.footer-note{font-size:.75rem}
+.footer-note a{color:var(--accent-color)}
+.skip-link{position:absolute;top:-100px;left:16px;z-index:10;background:#000;padding:10px}
+.skip-link:focus{top:8px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* Portfolio retained from the original CFS homepage. */
+.welcome-div{max-width:1100px;margin:20px auto;padding:20px 36px 50px;background:#171b1d;border-radius:20px}
+.brand{display:flex;align-items:center;min-height:150px;gap:12px}
+.coming-soon{font-size:1rem;line-height:1.6}
+.coming-soon-head{display:block;font-size:1.2rem;margin-bottom:8px}
+#mid-arrow{margin:0 30px}
+.brand-logo{max-width:100%;object-fit:contain}
+.boilerplate-privacy-policy{color:var(--accent-color)}
+
+/* Blog structure adapted from the try. stack, without application dependencies. */
+.blog-page{width:min(1100px,92%);margin:70px auto 100px;min-height:55vh}
+.blog-header{text-align:center;margin-bottom:40px}
+.blog-subtitle{color:var(--text-color-inferior)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.blog-card{background:var(--footer-bg);border-radius:var(--border-radius);box-shadow:0 4px 12px #0005;display:flex;flex-direction:column;overflow:hidden;border:1px solid #304146}
+.blog-image-wrapper{background:var(--bg-color);display:block;text-align:center}
+.blog-image{display:block;height:180px;object-fit:contain;padding:30px;width:100%}
+.blog-content{display:flex;flex:1;flex-direction:column;padding:20px 24px 28px}
+.blog-category{color:var(--accent-color);font-size:.8rem;font-weight:bold;margin-bottom:8px;letter-spacing:.08em}
+.blog-content h2{font-size:1.35rem;line-height:1.4;margin:0 0 10px}
+.blog-content p{flex-grow:1;font-size:1rem;color:#bfc8cc}
+.blog-read-more{align-self:flex-start}
+
+@media(max-width:1000px){header{flex-direction:column;gap:12px}
+nav{justify-content:center}
+.hero-row{gap:36px}
+.service-grid{grid-template-columns:1fr}
+.hero-inner{padding-top:65px}
+.blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){header{padding:12px 20px}
+.logo img{height:64px}
+nav{gap:12px 18px}
+nav a{font-size:.85rem}
+.hero-inner{padding:55px 22px 140px}
+.hero-row,.about-section{grid-template-columns:1fr;gap:28px}
+.hero-section{min-height:0}
+.hero-summary{padding:0 12px}
+.section{padding:48px 22px}
+.style-box{padding:22px}
+.style-box p{font-size:1.05rem}
+.service-card{padding:25px}
+.welcome-div{margin:20px 16px;padding:20px}
+.brand{flex-direction:column;gap:22px;margin-top:40px!important;margin-bottom:48px}
+.brand>div{width:100%!important;margin-left:0!important;justify-content:center!important}
+.coming-soon{text-align:center}
+#mid-arrow{display:none}
+.brand img{max-width:220px}
+.blog-grid{grid-template-columns:1fr}
+footer .button{overflow-wrap:anywhere;max-width:100%;font-size:.9rem}
+.about-section{margin-top:10px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+}
+
