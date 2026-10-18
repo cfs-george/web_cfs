@@ -33,7 +33,7 @@
     "description": "Learn why ongoing SEO management, sitemap maintenance and Google Search Console monitoring matter for a website's search visibility.",
     "name": "Why SEO Management Matters",
     "type": "BlogPosting",
-    "image": "/images/blog-seo-management.svg",
+    "image": "/images/blog-seo-management.png",
     "socialImage": "/images/cfs_logo_dark.png",
     "imageAlt": "Illustration of an SEO roadmap and search growth chart",
     "article": {
@@ -69,6 +69,24 @@
       "datePublished": "2026-10-18",
       "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" }
     }
+  },
+  "blog/website-launch-checklist/index.html": {
+    "title": "Website Launch Checklist for a New Service | Cyberfreak Software",
+    "description": "A practical website launch checklist for a new service, covering clear pages, internal links, sitemap updates and Search Console monitoring.",
+    "name": "Website Launch Checklist", "type": "BlogPosting", "image": "/images/blog-seo-management.png", "socialImage": "/images/cfs_logo_dark.png", "imageAlt": "Website pages, sitemap and search performance illustration",
+    "article": { "headline": "What to Include on a Website Before Launching a New Service", "datePublished": "2026-10-18", "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" } }
+  },
+  "blog/booking-website-beyond-contact-form/index.html": {
+    "title": "Why a Booking Website Needs More Than a Contact Form | Cyberfreak Software",
+    "description": "Learn why a booking website needs clear services, availability, confirmations and useful customer journeys beyond a basic contact form.",
+    "name": "Booking Websites Beyond Contact Forms", "type": "BlogPosting", "image": "/images/blog-indexed-pages.svg", "socialImage": "/images/cfs_logo_dark.png", "imageAlt": "Connected website pages leading to a booking journey",
+    "article": { "headline": "Why a Booking Website Needs More Than a Contact Form", "datePublished": "2026-10-18", "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" } }
+  },
+  "blog/from-side-project-to-product/index.html": {
+    "title": "From Side Project to Product: Building a Software Portfolio | Cyberfreak Software",
+    "description": "How turning a side project into a useful product can create a stronger software portfolio, clearer learning and a story worth sharing.",
+    "name": "From Side Project to Product", "type": "BlogPosting", "image": "/images/blog-query-data.svg", "socialImage": "/images/cfs_logo_dark.png", "imageAlt": "Data-led product ideas illustration",
+    "article": { "headline": "From Side Project to Product: Building a Useful Software Portfolio", "datePublished": "2026-10-18", "author": { "@type": "Organization", "name": "Cyberfreak Software", "url": "https://cyberfreaksoftware.co.uk/" } }
   },
   "boilerplate-privacy-policy/index.html": {
     "title": "React Native Boilerplate Privacy Policy | Cyberfreak Software",
