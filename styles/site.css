@@ -105,4 +105,8 @@ footer .button{overflow-wrap:anywhere;max-width:100%;font-size:.9rem}
 }
 
 
-.breadcrumbs{display:flex;justify-content:flex-start;gap:12px;max-width:1200px;margin:24px auto;padding:0 36px;font-size:.85rem;color:var(--text-color-inferior)}.breadcrumbs a{color:var(--accent-color)}
+/* Breadcrumbs overlay the content without shifting the hero below the header. */
+main#main{position:relative;display:flow-root;isolation:isolate}
+main#main > .breadcrumbs{position:absolute;top:16px;right:4%;z-index:3;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 12px;max-width:92%;margin:0;padding:0;background:transparent;font-size:.85rem;line-height:1.5;text-align:right;color:var(--text-color-inferior);text-shadow:0 1px 4px #000}
+.breadcrumbs a{color:var(--accent-color)}
+@media(max-width:600px){main#main > .breadcrumbs{top:12px;font-size:.75rem;gap:6px 8px}}
