@@ -39,6 +39,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Generate SEO metadata
+        run: node scripts/generate-headmeta.mjs
+      - name: Validate SEO metadata
+        run: node --test scripts/headmeta.test.mjs
       - name: Generate sitemap
         run: node scripts/generate-sitemap.mjs
       - name: Setup Pages
@@ -51,3 +55,44 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  maintenance:
+    # A real maintenance record also keeps the daily schedule active during quiet periods.
+    if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout latest default branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate sitemap generation
+        run: node scripts/generate-sitemap.mjs
+      - name: Record maintenance after 50 days without a commit
+        shell: bash
+        run: |
+          last_commit=$(git log -1 --format=%ct)
+          now=$(date +%s)
+          if (( now - last_commit < 50 * 24 * 60 * 60 )); then
+            echo "Recent repository activity; no maintenance commit needed."
+            exit 0
+          fi
+          node --input-type=module -e '
+            import { writeFileSync } from "node:fs";
+            writeFileSync(".github/maintenance.json", JSON.stringify({
+              checkedAt: new Date().toISOString(),
+              check: "Sitemap generation passed after a successful Pages deployment"
+            }, null, 2) + "\n");
+          '
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- .github/maintenance.json
+          git commit -m "chore: record scheduled sitemap maintenance"
+          # Never force-push: concurrent updates or branch protections must be respected.
+          git push origin HEAD:master

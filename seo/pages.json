@@ -1,0 +1,37 @@
+{
+  "index.html": {
+    "title": "SEO Management, Booking Websites & Software | Cyberfreak Software",
+    "description": "Practical SEO management, branded booking websites and independent software projects from Cyberfreak Software. Explore our services and talk to George.",
+    "name": "Cyberfreak Software",
+    "type": "WebPage"
+  },
+  "seo-management/index.html": {
+    "title": "SEO Management for Your Business | Cyberfreak Software",
+    "description": "Build a clearer search presence with practical SEO management: website reviews, technical foundations, useful content and ongoing support for your business.",
+    "name": "SEO Management",
+    "type": "WebPage",
+    "service": {
+      "name": "SEO Management",
+      "serviceType": "Search engine optimisation management"
+    }
+  },
+  "software-house/index.html": {
+    "title": "Software House & Project Portfolio | Cyberfreak Software",
+    "description": "Explore the Cyberfreak Software portfolio: business platforms, practitioner directories, booking websites, apps and developer tools we have built or worked on.",
+    "name": "Software House",
+    "type": "CollectionPage"
+  },
+  "blog/index.html": {
+    "title": "SEO, Websites & Software Blog | Cyberfreak Software",
+    "description": "Ideas and updates from Cyberfreak Software on SEO, booking websites and software development. Our first CFS articles are coming soon.",
+    "name": "Blog",
+    "type": "CollectionPage",
+    "blog": true
+  },
+  "boilerplate-privacy-policy/index.html": {
+    "title": "React Native Boilerplate Privacy Policy | Cyberfreak Software",
+    "description": "Read the privacy policy for the Cyberfreak Software React Native boilerplate, including how the application handles personal information.",
+    "name": "React Native Boilerplate Privacy Policy",
+    "type": "WebPage"
+  }
+}
