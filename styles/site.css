@@ -35,6 +35,7 @@ h3{font-size:1.65rem;font-weight:600}
 .text-link,.blog-read-more{color:var(--accent-color);font-weight:600}
 .about-section{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid #263236;margin-top:40px}
 .about-section p{margin-top:0;color:#c5ced1}
+.seo-hero-inner{display:flex;flex-direction:column;align-items:flex-end;text-align:right}.seo-hero-inner .style-box{margin-left:auto}.seo-package{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:70px;align-items:center}.seo-intro{max-width:720px;color:#c5ced1;font-size:1.1rem}.seo-inclusions{list-style:none;margin:38px 0 0;padding:0}.seo-inclusions li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:24px 0;border-top:1px solid #304146}.seo-inclusions li>span{color:var(--accent-color);font-size:.85rem;font-weight:700;letter-spacing:.08em}.seo-inclusions h3{font-size:1.3rem;margin:0 0 9px}.seo-inclusions p{margin:0;color:#c5ced1}.seo-graph-placeholder{position:relative;overflow:hidden;min-height:430px;padding:38px 32px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid #48636b;border-radius:24px;background:linear-gradient(150deg,#173139,#101415 67%)}.seo-graph-placeholder>i{position:absolute;top:54px;right:35px;color:#91e5f0;font-size:7rem;opacity:.85}.seo-graph-lines{position:absolute;inset:80px 32px auto;display:flex;align-items:flex-end;gap:11px;height:115px;border-bottom:1px solid #91e5f077}.seo-graph-lines span{display:block;flex:1;border-radius:4px 4px 0 0;background:#6ca5ac}.seo-graph-lines span:nth-child(1){height:34%}.seo-graph-lines span:nth-child(2){height:57%}.seo-graph-lines span:nth-child(3){height:88%;background:#91e5f0}.seo-graph-placeholder h3{margin:0 0 10px;font-size:1.75rem}.seo-graph-placeholder p:not(.eyebrow){margin:0;color:#c5ced1}.seo-testimonials{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;border-top:1px solid #263236;margin-top:20px}.seo-testimonials-heading h2{margin:0}.testimonial-placeholder{padding:36px;border:1px dashed #48636b;border-radius:20px;background:#101415}.testimonial-placeholder i{color:var(--accent-color);font-size:1.8rem}.testimonial-placeholder p{margin:18px 0 0;color:#c5ced1;font-size:1.1rem}.seo-enquiry{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid #263236;margin-top:20px}.seo-enquiry p{margin-top:0;color:#c5ced1}
 .compact{min-height:650px}
 .page-heading{max-width:1100px;margin:auto;padding:70px 30px 20px;text-align:center}
 .page-heading p{color:#bfc8cc}
@@ -75,6 +76,7 @@ footer p{color:#bfc8cc}
 nav{justify-content:center}
 .hero-row{gap:36px}
 .service-grid{grid-template-columns:1fr}
+.seo-package,.seo-testimonials,.seo-enquiry{grid-template-columns:1fr;gap:38px}
 .hero-inner{padding-top:65px}
 .blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -84,6 +86,7 @@ nav{gap:12px 18px}
 nav a{font-size:.85rem}
 .hero-inner{padding:55px 22px 140px}
 .hero-row,.about-section{grid-template-columns:1fr;gap:28px}
+.seo-package,.seo-testimonials,.seo-enquiry{gap:28px}
 .hero-section{min-height:0}
 .hero-summary{padding:0 12px}
 .section{padding:48px 22px}
@@ -99,6 +102,7 @@ nav a{font-size:.85rem}
 .blog-grid{grid-template-columns:1fr}
 footer .button{overflow-wrap:anywhere;max-width:100%;font-size:.9rem}
 .about-section{margin-top:10px}
+.seo-hero-inner{text-align:left;align-items:flex-start}.seo-hero-inner .style-box{margin-left:0}.seo-graph-placeholder{min-height:340px;padding:28px 24px}.seo-graph-placeholder>i{top:42px;right:24px;font-size:5.5rem}.seo-graph-lines{inset:65px 24px auto}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
