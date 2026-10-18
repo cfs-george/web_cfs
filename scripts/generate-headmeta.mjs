@@ -32,13 +32,6 @@ export function renderHead(file, page) {
     isPartOf: { '@id': siteId }, publisher: { '@id': orgId }, inLanguage: 'en-GB'
   };
   const graph = [organization, website, webpage];
-  if (file !== 'index.html') {
-    webpage.breadcrumb = { '@id': canonical.href + '#breadcrumb' };
-    graph.push({ '@type': 'BreadcrumbList', '@id': canonical.href + '#breadcrumb', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' },
-      { '@type': 'ListItem', position: 2, name: page.name, item: canonical.href }
-    ] });
-  }
   if (page.service) {
     webpage.mainEntity = { '@id': canonical.href + '#service' };
     graph.push({ '@type': 'Service', '@id': canonical.href + '#service', ...page.service, description: page.description, url: canonical.href, provider: { '@id': orgId } });
@@ -109,10 +102,7 @@ export async function generate() {
       .replace(/<meta\b[^>]*>/gi, tag => /\bcharset\s*=|\b(?:name|property)\s*=\s*["'](?:viewport|description|robots|color-scheme|theme-color|og:[^"']+|twitter:[^"']+|article:[^"']+)["']/i.test(tag) ? '' : tag)
       .replace(/<link\b[^>]*>/gi, tag => /\brel\s*=\s*["'](?:canonical|icon|preconnect)["']/i.test(tag) ? '' : tag);
     html = html.replace(head[0], `<head>\n${renderHead(file,page)}\n${preserved.trim()}\n</head>`);
-    if (file !== 'index.html' && !html.includes('aria-label="Breadcrumb"')) {
-      const breadcrumb = `<nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">${escapeHtml(page.name)}</span></nav>`;
-      html = html.replace(/(<main\b[^>]*>)/i, `$1\n${breadcrumb}`);
-    }
+    html = html.replace(/\s*<nav aria-label="Breadcrumb" class="breadcrumbs">[\s\S]*?<\/nav>/i, '');
     updates.push([file,html]);
   }
   for (const [file,html] of updates) await writeFile(path.join(root,file),html);

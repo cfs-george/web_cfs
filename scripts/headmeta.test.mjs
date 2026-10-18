@@ -24,7 +24,8 @@ for (const [file,page] of Object.entries(config)) {
       Object.values(value).forEach(visit);
     };
     graph.forEach(visit);
-    if (file!=='index.html') assert.ok(html.includes('aria-label="Breadcrumb"'));
+    assert.equal(graph.some(node=>node['@type']==='BreadcrumbList'), false);
+    assert.equal(html.includes('aria-label="Breadcrumb"'), false);
     assert.equal(graph.some(node=>node['@type']==='BlogPosting'), Boolean(page.article));
   });
 }
