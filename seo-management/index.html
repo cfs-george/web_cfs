@@ -95,9 +95,10 @@
 </script>
 <!-- /SEO -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="/styles/site.css?v=20261018-seo-clients">
+<link rel="stylesheet" href="/styles/site.css?v=20261018-seo-carousel">
 <link rel="stylesheet" href="/styles/contact.css?v=20261018-modal-motion">
 <script src="/scripts/contact.js?v=20261018-modal-motion" defer></script>
+<script src="/scripts/testimonials.js?v=20261018-seo-carousel" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -149,17 +150,20 @@
 <p class="eyebrow">CLIENT FEEDBACK</p>
 <h2>Results are better when they’re understood.</h2>
 </div>
-<div class="testimonial-list" aria-label="SEO management client testimonials">
-<article class="testimonial-card">
+<div class="testimonial-carousel" aria-roledescription="carousel" aria-label="SEO management client testimonials">
+<div class="testimonial-list">
+<article class="testimonial-card" aria-label="Testimonial 1 of 2">
 <a class="testimonial-client" href="https://opdevelopment.co.uk/" target="_blank" rel="noopener noreferrer"><img src="/images/opd_logo_light_circle.png" alt="Open Play Development logo"><span>Open Play Development <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
 <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Client quote to be added.</p>
 </article>
-<article class="testimonial-card">
-<a class="testimonial-client" href="https://thewebinabox.co.uk/" target="_blank" rel="noopener noreferrer"><img src="/images/twiab.jpg" alt="The Web in a Box logo"><span>The Web in a Box <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+<article class="testimonial-card" aria-label="Testimonial 2 of 2" hidden>
+<a class="testimonial-client" href="https://thewebinabox.co.uk/" target="_blank" rel="noopener noreferrer"><img src="/images/twiab.webp" alt="The Web in a Box logo"><span>The Web in a Box <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
 <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Client quote to be added.</p>
 </article>
+</div>
+<div class="testimonial-controls"><button class="testimonial-button" type="button" data-testimonial-previous aria-label="Show previous testimonial"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button><div class="testimonial-dots" role="tablist" aria-label="Choose a testimonial"><button type="button" role="tab" aria-selected="true" data-testimonial-dot="0"><span class="sr-only">Show Open Play Development testimonial</span></button><button type="button" role="tab" aria-selected="false" data-testimonial-dot="1"><span class="sr-only">Show The Web in a Box testimonial</span></button></div><button class="testimonial-button" type="button" data-testimonial-next aria-label="Show next testimonial"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div>
 </div>
 </section>
 <section class="section seo-enquiry">
