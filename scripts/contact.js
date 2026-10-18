@@ -26,6 +26,15 @@ const form = dialog.querySelector('form');
 const status = dialog.querySelector('.contact-status');
 const submit = dialog.querySelector('[type="submit"]');
 let trigger;
+let closeTimer;
+
+const close = () => {
+  if (!dialog.open || dialog.classList.contains('is-closing')) return;
+  dialog.classList.remove('is-visible');
+  dialog.classList.add('is-closing');
+  closeTimer = window.setTimeout(() => dialog.close(), 160);
+};
+
 document.querySelectorAll('[data-contact-open]').forEach(button => {
   button.setAttribute('aria-haspopup', 'dialog');
   button.addEventListener('click', () => {
@@ -34,15 +43,32 @@ document.querySelectorAll('[data-contact-open]').forEach(button => {
     if (!submit.disabled) status.textContent = '';
 
     dialog.showModal();
+    // Start the transition on the following frame, after the dialog enters
+    // the top layer.
+    window.requestAnimationFrame(() => dialog.classList.add('is-visible'));
   });
 });
-dialog.querySelector('.contact-close').addEventListener('click', () => dialog.close());
+dialog.querySelector('.contact-close').addEventListener('click', close);
 dialog.addEventListener('click', event => {
   if (event.target !== dialog) return;
   const rect = dialog.getBoundingClientRect();
-  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
 });
-dialog.addEventListener('close', () => trigger?.focus());
+dialog.addEventListener('close', () => {
+  window.clearTimeout(closeTimer);
+  dialog.classList.remove('is-visible', 'is-closing');
+  trigger?.focus();
+});
+dialog.addEventListener('cancel', event => {
+  // Keep Escape consistent with the close button and outside-click transition.
+  event.preventDefault();
+  close();
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !dialog.open) return;
+  event.preventDefault();
+  close();
+});
 form.addEventListener('submit', async event => {
   event.preventDefault();
   if (!contactEndpoint || submit.disabled) return;
