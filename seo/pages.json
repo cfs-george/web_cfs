@@ -1,18 +1,19 @@
 {
   "index.html": {
     "title": "SEO Management, Booking Websites & Software | Cyberfreak Software",
-    "description": "Practical SEO management, branded booking websites and independent software projects from Cyberfreak Software. Explore our services and talk to us.",
+    "description": "Google Search Console monitoring, sitemap management and monthly SEO reports, alongside branded booking websites and independent software projects.",
     "name": "Cyberfreak Software",
     "type": "WebPage"
   },
   "seo-management/index.html": {
     "title": "SEO Management & Google Search Console | Cyberfreak Software",
-    "description": "Practical SEO management for your business: sitemap maintenance and submission, Google Search Console tracking, and search-led content opportunities.",
+    "description": "Ongoing Google Search Console monitoring, sitemap management, monthly SEO reports and practical keyword recommendations for your business website.",
     "name": "SEO Management",
     "type": "WebPage",
     "service": {
       "name": "SEO Management",
-      "serviceType": "Search engine optimisation management"
+      "serviceType": "Search engine optimisation monitoring and management",
+      "description": "Ongoing Google Search Console monitoring, sitemap management, monthly SEO performance reporting and keyword recommendations. Content creation, bespoke development and substantial technical work are separately agreed."
     }
   },
   "software-house/index.html": {
