@@ -1,12 +1,12 @@
 {
   "index.html": {
-    "title": "SEO Management, Booking Websites & Software | Cyberfreak Software",
+    "title": "SEO Management & Software | Cyberfreak Software",
     "description": "Google Search Console monitoring, sitemap management and monthly SEO reports, alongside branded booking websites and independent software projects.",
     "name": "Cyberfreak Software",
     "type": "WebPage"
   },
   "seo-management/index.html": {
-    "title": "SEO Management & Google Search Console | Cyberfreak Software",
+    "title": "SEO Management | Cyberfreak Software",
     "description": "Ongoing Google Search Console monitoring, sitemap management, monthly SEO reports and practical keyword recommendations for your business website.",
     "name": "SEO Management",
     "type": "WebPage",
@@ -17,7 +17,7 @@
     }
   },
   "software-house/index.html": {
-    "title": "Software House & Project Portfolio | Cyberfreak Software",
+    "title": "Software House | Cyberfreak Software",
     "description": "Explore the Cyberfreak Software portfolio: business platforms, practitioner directories, booking websites, apps and developer tools we have built or worked on.",
     "name": "Software House",
     "type": "CollectionPage"
@@ -30,7 +30,7 @@
     "blog": true
   },
   "blog/why-seo-management-matters/index.html": {
-    "title": "Why SEO Management Matters for Your Website | Cyberfreak Software",
+    "title": "Why SEO Management Matters | Cyberfreak Software",
     "description": "Learn why ongoing SEO management, sitemap maintenance and Google Search Console monitoring matter for a website's search visibility.",
     "name": "Why SEO Management Matters",
     "type": "BlogPosting",
@@ -49,7 +49,7 @@
     }
   },
   "blog/more-indexed-pages-more-opportunities/index.html": {
-    "title": "More Indexed Pages, More Search Opportunities? | Cyberfreak Software",
+    "title": "More Indexed Pages? | Cyberfreak Software",
     "description": "Understand how indexable, useful website pages can create more opportunities to appear in Google Search and attract relevant traffic.",
     "name": "More Indexed Pages, More Search Opportunities?",
     "type": "BlogPosting",
@@ -68,7 +68,7 @@
     }
   },
   "blog/search-console-query-data-content-ideas/index.html": {
-    "title": "Use Search Console Query Data for SEO Content Ideas | Cyberfreak Software",
+    "title": "Search Console Content Ideas | Cyberfreak Software",
     "description": "Use Google Search Console query data to find keyword opportunities, plan useful SEO content and improve pages already appearing in search.",
     "name": "Use Search Console Query Data for SEO Content Ideas",
     "type": "BlogPosting",
@@ -87,7 +87,7 @@
     }
   },
   "blog/website-launch-checklist/index.html": {
-    "title": "Website Launch Checklist for a New Service | Cyberfreak Software",
+    "title": "Website Launch Checklist | Cyberfreak Software",
     "description": "A practical website launch checklist for a new service, covering clear pages, internal links, sitemap updates and Search Console monitoring.",
     "name": "Website Launch Checklist",
     "type": "BlogPosting",
@@ -106,7 +106,7 @@
     }
   },
   "blog/booking-website-beyond-contact-form/index.html": {
-    "title": "Why a Booking Website Needs More Than a Contact Form | Cyberfreak Software",
+    "title": "Booking Website vs Contact Form | Cyberfreak Software",
     "description": "Learn why a booking website needs clear services, availability, confirmations and useful customer journeys beyond a basic contact form.",
     "name": "Booking Websites Beyond Contact Forms",
     "type": "BlogPosting",
@@ -125,7 +125,7 @@
     }
   },
   "blog/from-side-project-to-product/index.html": {
-    "title": "From Side Project to Product: Building a Software Portfolio | Cyberfreak Software",
+    "title": "From Side Project to Product | Cyberfreak Software",
     "description": "How turning a side project into a useful product can create a stronger software portfolio, clearer learning and a story worth sharing.",
     "name": "From Side Project to Product",
     "type": "BlogPosting",
@@ -144,13 +144,25 @@
     }
   },
   "boilerplate-privacy-policy/index.html": {
-    "title": "React Native Boilerplate Privacy Policy | Cyberfreak Software",
+    "title": "React Native Privacy Policy | Cyberfreak Software",
     "description": "Read the privacy policy for the Cyberfreak Software React Native boilerplate, including how the application handles personal information.",
     "name": "React Native Boilerplate Privacy Policy",
     "type": "WebPage"
   },
+  "terms/index.html": {
+    "title": "Terms of Service | Cyberfreak Software",
+    "description": "Read Cyberfreak Software's general terms of service, including the clear scope of our SEO Management service.",
+    "name": "Terms of Service",
+    "type": "WebPage"
+  },
+  "privacy-policy/index.html": {
+    "title": "Privacy Policy | Cyberfreak Software",
+    "description": "How Cyberfreak Software Limited handles contact enquiries, client service information and SEO Management data.",
+    "name": "Privacy Policy",
+    "type": "WebPage"
+  },
   "blog/first-website-help/index.html": {
-    "title": "First Website Help: What Your Business Website Needs Before It Goes Live | Cyberfreak Software",
+    "title": "First Website Help | Cyberfreak Software",
     "description": "A first website should make it easy for the right visitor to understand the business, trust it and take the next step.",
     "name": "First Website Help: What Your Business Website Needs Before It Goes Live",
     "type": "BlogPosting",
@@ -169,7 +181,7 @@
     }
   },
   "blog/seo-content-management/index.html": {
-    "title": "SEO Content Management: Plan Better Pages With Search Data | Cyberfreak Software",
+    "title": "SEO Content Management | Cyberfreak Software",
     "description": "SEO content management gives a business a repeatable way to choose, create and improve pages based on evidence.",
     "name": "SEO Content Management: Plan Better Pages With Search Data",
     "type": "BlogPosting",
@@ -188,7 +200,7 @@
     }
   },
   "blog/seo-management-guide/index.html": {
-    "title": "SEO Management Guide: Sitemaps, Search Console and Content Planning | Cyberfreak Software",
+    "title": "SEO Management Guide | Cyberfreak Software",
     "description": "This practical guide explains the moving parts of SEO management for a growing business website.",
     "name": "SEO Management Guide: Sitemaps, Search Console and Content Planning",
     "type": "BlogPosting",
@@ -207,7 +219,7 @@
     }
   },
   "blog/booking-calendar-vs-contact-form/index.html": {
-    "title": "Should My Website Have a Booking Calendar or a Contact Form? | Cyberfreak Software",
+    "title": "Booking Calendar or Contact Form? | Cyberfreak Software",
     "description": "The best choice depends on what customers need to decide and how much information they need before booking.",
     "name": "Should My Website Have a Booking Calendar or a Contact Form?",
     "type": "BlogPosting",

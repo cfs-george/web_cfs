@@ -28,7 +28,7 @@ export function renderHead(file, page) {
   };
   const website = { '@type': 'WebSite', '@id': siteId, name: brand, url: origin + '/', publisher: { '@id': orgId }, inLanguage: 'en-GB' };
   const webpage = {
-    '@type': page.type || 'WebPage', '@id': canonical.href + '#webpage',
+    '@type': page.webpageType || (page.type === 'CollectionPage' ? 'CollectionPage' : 'WebPage'), '@id': canonical.href + '#webpage',
     url: canonical.href, name: page.title, description: page.description,
     isPartOf: { '@id': siteId }, publisher: { '@id': orgId }, inLanguage: 'en-GB'
   };
