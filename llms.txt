@@ -1,0 +1,26 @@
+# Cyberfreak Software
+
+Cyberfreak Software Limited is a UK software business providing ongoing SEO Management as its primary service, alongside branded booking website deployments and independent software projects. SEO Management covers Google Search Console monitoring, sitemap-related management, monthly reporting and practical keyword recommendations; content creation, bespoke development and substantial technical work are separately agreed. The website also publishes practical guides on search visibility, website launches, booking journeys and software.
+
+## Main visitor journeys
+
+- [Cyberfreak Software home](https://cyberfreaksoftware.co.uk/): overview of SEO Management, Website Deployments and Software House work; use the site contact dialog to make an enquiry.
+- [SEO Management](https://cyberfreaksoftware.co.uk/seo-management/): service scope, monthly reporting, technical configuration and enquiry route.
+- [Website Deployments](https://try.cyberfreaksoftware.co.uk/): external CFS booking-website deployment platform.
+- [Software House](https://cyberfreaksoftware.co.uk/software-house/): portfolio of platforms, applications and independent projects.
+
+## Core guides and content
+
+- [Blog](https://cyberfreaksoftware.co.uk/blog/): index of CFS articles.
+- [Why SEO Management Matters](https://cyberfreaksoftware.co.uk/blog/why-seo-management-matters/)
+- [SEO Management Guide](https://cyberfreaksoftware.co.uk/blog/seo-management-guide/)
+- [Search Console Content Ideas](https://cyberfreaksoftware.co.uk/blog/search-console-query-data-content-ideas/)
+- [More Indexed Pages, More Search Opportunities?](https://cyberfreaksoftware.co.uk/blog/more-indexed-pages-more-opportunities/)
+- [Website Launch Checklist](https://cyberfreaksoftware.co.uk/blog/website-launch-checklist/)
+- [Booking Website Beyond a Contact Form](https://cyberfreaksoftware.co.uk/blog/booking-website-beyond-contact-form/)
+- [Booking Calendar or Contact Form?](https://cyberfreaksoftware.co.uk/blog/booking-calendar-vs-contact-form/)
+
+## Service information
+
+- [Terms of Service](https://cyberfreaksoftware.co.uk/terms/): general service terms and SEO Management scope.
+- [Privacy Policy](https://cyberfreaksoftware.co.uk/privacy-policy/): information handling for enquiries and services.
