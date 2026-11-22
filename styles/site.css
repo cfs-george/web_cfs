@@ -46,6 +46,8 @@ h3{font-size:1.65rem;font-weight:600}
 .seo-mid-cta{padding-top:12px;padding-bottom:26px;text-align:center}
 .seo-hero-inner .style-box{max-width:630px}
 .seo-hero-actions{display:flex;width:100%;flex-flow:row nowrap;align-items:center;justify-content:space-between;gap:12px}.seo-hero-actions .seo-hero-price{margin:0;text-align:left;white-space:nowrap}.seo-hero-actions .button{min-width:0;margin-left:auto}
+.seo-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.seo-hero-actions .seo-cta-actions{justify-content:flex-end}.button-secondary{background:transparent;border:1px solid #6ca5ac;color:#91e5f0}.button-secondary:hover,.button-secondary:focus-visible{background:#17282c}.seo-mid-cta .seo-cta-actions{justify-content:center}
+.seo-checkout-note{margin:14px 0 0;color:#bfc8cc;font-size:.82rem;line-height:1.5}.seo-checkout-note a{color:#91e5f0}
 @media(max-width:600px){.seo-hero-actions{gap:8px}.seo-hero-actions .button{padding:10px 12px;font-size:.9rem}}
 .seo-report-preview-copy .eyebrow{color:var(--accent-color)}
 @media(max-width:600px){.testimonial-card{max-height:500px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#6ca5ac #172428;scrollbar-width:thin}.testimonial-card::-webkit-scrollbar{width:8px}.testimonial-card::-webkit-scrollbar-thumb{border-radius:999px;background:#6ca5ac}.testimonial-card::-webkit-scrollbar-track{background:#172428}}
