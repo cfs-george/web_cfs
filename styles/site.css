@@ -46,6 +46,7 @@ h3{font-size:1.65rem;font-weight:600}
 .seo-mid-cta{padding-top:12px;padding-bottom:26px;text-align:center}
 .seo-hero-inner .style-box{max-width:630px}
 .seo-report-preview-copy .eyebrow{color:var(--accent-color)}
+@media(max-width:600px){.testimonial-card{max-height:500px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#6ca5ac #172428;scrollbar-width:thin}.testimonial-card::-webkit-scrollbar{width:8px}.testimonial-card::-webkit-scrollbar-thumb{border-radius:999px;background:#6ca5ac}.testimonial-card::-webkit-scrollbar-track{background:#172428}}
 .compact{min-height:650px}
 .inner-page-hero{min-height:460px}.inner-page-hero .hero-inner>p:not(.eyebrow){max-width:680px;color:#c5ced1;font-size:1.15rem}
 .legal-hero::before{background-image:url('/images/background_city_compressed.webp')}.legal-page{width:min(820px,92%);margin:65px auto 100px;color:#d3dbde;font-size:1.08rem;line-height:1.75}.legal-page h2{margin:52px 0 16px;font-size:1.9rem;color:var(--text-color)}.legal-page h3{margin:32px 0 12px;font-size:1.35rem;color:var(--text-color)}.legal-page p{margin:0 0 22px}.legal-page a{color:var(--accent-color);font-weight:600}
