@@ -13,6 +13,8 @@ dialog.innerHTML = `
     <input id="contact-name" name="name" autocomplete="name" maxlength="120" required>
     <label for="contact-email">Your email</label>
     <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+    <label for="contact-phone">Your phone number <span class="contact-optional">(optional)</span></label>
+    <input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
     <label for="contact-subject">What would you like to discuss?</label>
     <select id="contact-subject" name="subject"><option>General enquiry</option><option>SEO management</option><option>Website deployments</option><option>Software project</option><option>Privacy question</option></select>
     <label for="contact-message">Your message</label>

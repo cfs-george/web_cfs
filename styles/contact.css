@@ -3,3 +3,4 @@ button{font-family:inherit;cursor:pointer}button:focus-visible{outline:3px solid
 .contact-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 
 .social-links a[aria-label="Cyberfreak Software on X"] i{margin-left:0}
+.contact-optional{color:#aebbbe;font-weight:400}
