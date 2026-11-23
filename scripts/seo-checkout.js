@@ -1,11 +1,9 @@
 const checkoutBaseUrl = "https://try.cyberfreaksoftware.co.uk/api/cfs-seo-checkout/";
-const attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid"];
 
 const checkoutUrl = () => {
   const destination = new URL(checkoutBaseUrl);
-  const source = new URLSearchParams(window.location.search);
-  attributionKeys.forEach((key) => {
-    const value = source.get(key);
+  const attribution = window.cfsAttribution?.get() || {};
+  Object.entries(attribution).forEach(([key, value]) => {
     if (value) destination.searchParams.set(key, value);
   });
   return destination.href;

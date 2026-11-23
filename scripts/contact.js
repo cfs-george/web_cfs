@@ -29,6 +29,26 @@ const status = dialog.querySelector('.contact-status');
 const submit = dialog.querySelector('[type="submit"]');
 let trigger;
 let closeTimer;
+let leadConversionSent = false;
+
+function hasAdvertisingConsent() {
+  try {
+    return window.localStorage.getItem('silktideCookieChoice_advertising_cfs') === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function sendLeadConversionOnce() {
+  if (leadConversionSent || !hasAdvertisingConsent() || typeof window.gtag !== 'function') return;
+
+  leadConversionSent = true;
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-18589141066/WDUGCMyCwL0dEMqQ_59F',
+    value: 1.0,
+    currency: 'GBP'
+  });
+}
 
 const close = () => {
   if (!dialog.open || dialog.classList.contains('is-closing')) return;
@@ -84,12 +104,17 @@ form.addEventListener('submit', async event => {
     const response = await fetch(contactEndpoint, {
       method: 'POST', credentials: 'omit',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json', 'X-CFS-Contact': '1' },
-      body: JSON.stringify({ ...Object.fromEntries(new FormData(form)), source: location.origin + location.pathname })
+      body: JSON.stringify({
+        ...Object.fromEntries(new FormData(form)),
+        source: location.origin + location.pathname,
+        attribution: window.cfsAttribution?.get() || {}
+      })
     });
     const result = await response.json();
     if (!response.ok || result.success !== true) throw new Error('Unable to send');
     form.reset();
     status.textContent = 'Thank you — your message has been sent.';
+    sendLeadConversionOnce();
   } catch {
     status.textContent = 'Your message could not be sent. Please try again later.';
   } finally {

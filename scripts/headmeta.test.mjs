@@ -17,6 +17,7 @@ for (const [file,page] of Object.entries(config)) {
     assert.equal((head.match(/GTM-P8NKSRB9/g)||[]).length, 1);
     assert.equal((head.match(/<script\b[^>]*\bsrc=["']https:\/\/www\.googletagmanager\.com\/gtm\.js\?id=GTM-P8NKSRB9["'][^>]*><\/script>/gi)||[]).length, 0);
     assert.equal((head.match(/silktide-consent-manager\.css/g)||[]).length, 1);
+    assert.equal((head.match(/cfs-attribution\.js/g)||[]).length, 1);
     assert.equal((head.match(/silktide-consent-manager\.js/g)||[]).length, 1);
     assert.equal((head.match(/cfs-cookie-consent\.js/g)||[]).length, 1);
     assert.ok(head.indexOf('gtag("consent", "default"') < head.indexOf('GTM-P8NKSRB9'));
@@ -58,4 +59,14 @@ test('Article configuration requires real details and emits connected article sc
 
 test('Canonicals cannot accidentally point to another domain',()=>{
   assert.throws(()=>renderHead('index.html',{title:'Title',description:'Description',name:'Home',canonical:'https://example.com/'}),/invalid CFS canonical/);
+});
+
+test('SEO purchase conversion remains disabled until a distinct destination is configured', async () => {
+  const script = await readFile(new URL('scripts/cfs-seo-purchase-conversion.js', root), 'utf8');
+  const thankYou = await readFile(new URL('seo-management/thank-you/index.html', root), 'utf8');
+  assert.match(script, /const cfsSeoPurchaseConversionDestination = '';/);
+  assert.match(script, /if \(!cfsSeoPurchaseConversionDestination/);
+  assert.match(script, /credentials: 'omit'/);
+  assert.match(script, /transaction_id: result\.transactionId/);
+  assert.match(thankYou, /<script src="\/scripts\/cfs-seo-purchase-conversion\.js" defer><\/script>/);
 });

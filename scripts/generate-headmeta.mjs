@@ -72,6 +72,7 @@ export function renderHead(file, page) {
     '<!-- Google Tag Manager -->',
     "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P8NKSRB9');</script>",
     '<!-- End Google Tag Manager -->',
+    '<script src="/scripts/cfs-attribution.js" defer></script>',
     '<script src="/scripts/silktide-consent-manager.js" defer></script>',
     '<script src="/scripts/cfs-cookie-consent.js" defer></script>',
     ...Object.entries({ title: page.title, description: page.description, url: canonical.href, type: page.article ? 'article' : (page.ogType || 'website'), site_name: brand, locale: 'en_GB', image: socialImage, 'image:type': 'image/png', 'image:alt': imageAlt }).filter(([key]) => key !== 'image:type' || socialImage.endsWith('.png')).map(([key,value]) => meta('og:' + key,value,true)),
