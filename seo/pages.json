@@ -236,5 +236,12 @@
       },
       "dateModified": "2026-11-14"
     }
+  },
+  "seo-management/thank-you/index.html": {
+    "title": "Subscription received | Cyberfreak Software",
+    "description": "Your Cyberfreak Software SEO Management subscription has been received. We will be in touch shortly to begin onboarding.",
+    "name": "SEO Management subscription received",
+    "type": "WebPage",
+    "robots": "noindex,nofollow"
   }
 }
