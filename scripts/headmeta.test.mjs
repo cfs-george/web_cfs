@@ -14,6 +14,13 @@ for (const [file,page] of Object.entries(config)) {
     assert.equal((head.match(/name="description"/g)||[]).length,1);
     assert.equal((head.match(/rel="canonical"/g)||[]).length,1);
     assert.equal((head.match(/type="application\/ld\+json"/g)||[]).length,1);
+    assert.equal((head.match(/GTM-P8NKSRB9/g)||[]).length, 1);
+    assert.equal((head.match(/silktide-consent-manager\.css/g)||[]).length, 1);
+    assert.equal((head.match(/silktide-consent-manager\.js/g)||[]).length, 1);
+    assert.equal((head.match(/cfs-cookie-consent\.js/g)||[]).length, 1);
+    assert.ok(head.indexOf('gtag("consent", "default"') < head.indexOf('GTM-P8NKSRB9'));
+    assert.ok(head.includes('ad_storage: "denied"'));
+    assert.ok(head.includes('analytics_storage: "denied"'));
     assert.ok(head.includes(renderHead(file,page)));
     const graph = parseGraph(head);
     const ids = graph.map(node=>node['@id']);
@@ -34,7 +41,7 @@ test('HTML and JSON encoding handle quotes, ampersands and script terminators',(
   const text = 'A "quote" & </script><script>alert(1)</script>';
   const head=renderHead('index.html',{title:text,description:text,name:text});
   assert.ok(head.includes('&quot;quote&quot; &amp; &lt;/script&gt;'));
-  assert.equal((head.match(/<script /g)||[]).length,1);
+  assert.equal((head.match(/<script type="application\/ld\+json">/g)||[]).length,1);
   assert.equal(parseGraph(head).find(node=>node['@type']==='WebPage').description,text);
 });
 
