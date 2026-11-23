@@ -15,6 +15,7 @@ for (const [file,page] of Object.entries(config)) {
     assert.equal((head.match(/rel="canonical"/g)||[]).length,1);
     assert.equal((head.match(/type="application\/ld\+json"/g)||[]).length,1);
     assert.equal((head.match(/GTM-P8NKSRB9/g)||[]).length, 1);
+    assert.equal((head.match(/<script\b[^>]*\bsrc=["']https:\/\/www\.googletagmanager\.com\/gtm\.js\?id=GTM-P8NKSRB9["'][^>]*><\/script>/gi)||[]).length, 0);
     assert.equal((head.match(/silktide-consent-manager\.css/g)||[]).length, 1);
     assert.equal((head.match(/silktide-consent-manager\.js/g)||[]).length, 1);
     assert.equal((head.match(/cfs-cookie-consent\.js/g)||[]).length, 1);
