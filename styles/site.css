@@ -125,3 +125,4 @@ footer .button{overflow-wrap:anywhere;max-width:100%;font-size:.9rem}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 }
+.seo-reviews-cta{margin-top:22px;text-align:center}.seo-google-reviews{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid #48636b;background:#172428;color:#91e5f0;font-size:.9rem}.seo-google-reviews:hover,.seo-google-reviews:focus-visible{background:#24383e;color:#91e5f0}
