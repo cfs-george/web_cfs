@@ -61,12 +61,14 @@ test('Canonicals cannot accidentally point to another domain',()=>{
   assert.throws(()=>renderHead('index.html',{title:'Title',description:'Description',name:'Home',canonical:'https://example.com/'}),/invalid CFS canonical/);
 });
 
-test('SEO purchase conversion remains disabled until a distinct destination is configured', async () => {
+test('SEO purchase conversion only sends verified live Stripe payments', async () => {
   const script = await readFile(new URL('scripts/cfs-seo-purchase-conversion.js', root), 'utf8');
   const thankYou = await readFile(new URL('seo-management/thank-you/index.html', root), 'utf8');
-  assert.match(script, /const cfsSeoPurchaseConversionDestination = '';/);
+  assert.match(script, /AW-18589141066\/QDNOCMX3mb4dEMqQ_59F/);
   assert.match(script, /if \(!cfsSeoPurchaseConversionDestination/);
   assert.match(script, /credentials: 'omit'/);
+  assert.match(script, /result\.mode === 'live'/);
   assert.match(script, /transaction_id: result\.transactionId/);
+  assert.doesNotMatch(script, /new_customer/);
   assert.match(thankYou, /<script src="\/scripts\/cfs-seo-purchase-conversion\.js" defer><\/script>/);
 });

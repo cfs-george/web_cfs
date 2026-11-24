@@ -1,5 +1,5 @@
-/* Set this only after Google Ads supplies the distinct CFS SEO purchase destination. */
-const cfsSeoPurchaseConversionDestination = '';
+const cfsSeoPurchaseConversionDestination =
+  'AW-18589141066/QDNOCMX3mb4dEMqQ_59F';
 
 (function () {
   const handledStoragePrefix = 'cfsSeoPurchaseConversion:';
@@ -50,7 +50,7 @@ const cfsSeoPurchaseConversionDestination = '';
         const response = await fetch(endpoint, { credentials: 'omit' });
         const result = await response.json();
 
-        if (response.ok && result.eligible === true && typeof result.transactionId === 'string' && typeof result.value === 'number' && typeof result.currency === 'string') {
+        if (response.ok && result.eligible === true && result.mode === 'live' && typeof result.transactionId === 'string' && typeof result.value === 'number' && typeof result.currency === 'string') {
           markHandled();
           window.gtag('event', 'conversion', {
             send_to: cfsSeoPurchaseConversionDestination,
