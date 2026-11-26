@@ -57,19 +57,28 @@ const close = () => {
   closeTimer = window.setTimeout(() => dialog.close(), 160);
 };
 
+function openContact(subject, sourceButton) {
+  trigger = sourceButton;
+  form.elements.subject.value = subject;
+  if (!submit.disabled) status.textContent = '';
+
+  dialog.showModal();
+  // Start the transition on the following frame, after the dialog enters
+  // the top layer.
+  window.requestAnimationFrame(() => dialog.classList.add('is-visible'));
+}
+
 document.querySelectorAll('[data-contact-open]').forEach(button => {
   button.setAttribute('aria-haspopup', 'dialog');
   button.addEventListener('click', () => {
-    trigger = button;
-    form.elements.subject.value = button.dataset.contactSubject || (location.pathname.includes('privacy') ? 'Privacy question' : 'General enquiry');
-    if (!submit.disabled) status.textContent = '';
-
-    dialog.showModal();
-    // Start the transition on the following frame, after the dialog enters
-    // the top layer.
-    window.requestAnimationFrame(() => dialog.classList.add('is-visible'));
+    openContact(button.dataset.contactSubject || (location.pathname.includes('privacy') ? 'Privacy question' : 'General enquiry'), button);
   });
 });
+
+if (new URLSearchParams(location.search).get('contact') === 'seo-management') {
+  openContact('SEO management', null);
+}
+
 dialog.querySelector('.contact-close').addEventListener('click', close);
 dialog.addEventListener('click', event => {
   if (event.target !== dialog) return;
